@@ -44,9 +44,9 @@ struct ObjectTypeGetter {
 
 struct ObjectValidityChecker {
   bool operator()(std::monostate) const { return false; }
-  bool operator()(OpenGlBuffer obj) const { return obj.id != GL_INVALID_INDEX; }
+  bool operator()(OpenGlBuffer obj) const { return obj.id != 0xFFFFFFFFu; }
   bool operator()(OpenGlTexture obj) const {
-    return obj.id != GL_INVALID_INDEX && obj.format != GL_INVALID_ENUM;
+    return obj.id != 0xFFFFFFFFu && obj.format != 0x0500;
   }
   bool operator()(OpenClBuffer obj) const { return obj.memobj; }
   bool operator()(OpenClTexture obj) const { return obj.memobj; }

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\tensorflow\lite\c\common_internal.cc" />
+    <ClCompile Include="..\tensorflow\lite\c\c_api_opaque_internal.cc" />
+    <ClCompile Include="dllmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tensorflow-lite-c.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\abseil-cpp\build-windows\abseil-cpp.vcxproj">
+      <Project>{4f102c06-c8c2-4a2e-814e-b624735295bd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\flatbuffers\build-windows\flatbuffers.vcxproj">
+      <Project>{d50034c0-2601-4256-8306-35782f4e22c0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\XNNPACK\build-windows\XNNPACK.vcxproj">
+      <Project>{c36bb7a0-0120-4ee8-9cad-76af96a4e5de}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tensorflow-lite.vcxproj">
+      <Project>{093ede03-0bb8-4e6e-a69f-03a6f302d6d9}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a2fe3484-9899-4802-8831-cb71bc6213db}</ProjectGuid>
+    <RootNamespace>tensorflow-lite-c</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(SolutionDir)\obj\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(SolutionDir)\obj\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(SolutionDir)\obj\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(SolutionDir)\obj\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>CL_DELEGATE_NO_GL;TFLITE_KERNEL_USE_XNNPACK;TFLITE_MMAP_DISABLED;TFL_STATIC_LIBRARY_BUILD;EIGEN_NEON_GEBP_NR=4;EIGEN_MPL2_ONLY;XNN_ENABLE_ARM_FP16_VECTOR=0;XNN_ENABLE_ARM_FP16_SCALAR=0;XNN_ENABLE_ARM_BF16=0;XNN_ENABLE_ARM_DOTPROD=0;XNN_ENABLE_ARM_I8MM=0;XNN_ENABLE_RISCV_VECTOR=1;XNN_ENABLE_AVXVNNI=1;XNN_ENABLE_AVXVNNIINT8=1;XNN_ENABLE_AVX256SKX=1;XNN_ENABLE_AVX256VNNI=1;XNN_ENABLE_AVX256VNNIGFNI=1;XNN_ENABLE_AVX512VNNIGFNI=1;XNN_ENABLE_AVX512AMX=1;XNN_ENABLE_AVX512FP16=1;XNN_ENABLE_VSX=1;XNN_ENABLE_ASSEMBLY=1;XNN_ENABLE_MEMOPT=1;XNN_ENABLE_SPARSE=1;XNN_ENABLE_GEMM_M_SPECIALIZATION=1;XNN_ENABLE_DWCONV_MULTIPASS=0;XNN_ENABLE_HVX=1;XNN_ENABLE_KLEIDIAI=0;XNN_ENABLE_CPUINFO=1;XNN_LOG_LEVEL=4;FXDIV_USE_INLINE_ASSEMBLY=0;PTHREADPOOL_NO_DEPRECATED_API=1;CPUINFO_SUPPORTED_PLATFORM=1;CPUINFO_LOG_TO_STDIO=1;CPUINFO_LOG_LEVEL=2;GOOGLE_PROTOBUF_CMAKE_BUILD=1;FLATBUFFERS_LOCALE_INDEPENDENT=1;_WIN32_WINNT=0x0601;NOMINMAX=1;NOGDI=1;WIN32_LEAN_AND_MEAN=1;_CRT_SECURE_NO_WARNINGS=1;_WINDOWS;_USRDLL;_DEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..;$(ProjectDir)\..\tensorflow\lite\delegates\gpu\common;$(ProjectDir)\..\tensorflow\lite\delegates\gpu\common\task;$(ProjectDir)\..\third_party\xla;$(ProjectDir)\..\proto-cpp-out;$(ProjectDir)\..\flat-cpp-out;$(ProjectDir)\..\..\gemmlowp;$(ProjectDir)\..\..\XNNPACK\include;$(ProjectDir)\..\..\FP16\include;$(ProjectDir)\..\..\FXdiv\include;$(ProjectDir)\..\..\pthreadpool\include;$(ProjectDir)\..\..\cpuinfo\include;$(ProjectDir)\..\..\protobuf\src;$(ProjectDir)\..\..\flatbuffers\include;$(ProjectDir)\..\..\eigen;$(ProjectDir)\..\..\ruy;$(ProjectDir)\..\..\abseil-cpp;$(ProjectDir)\..\..\farmhash\src;$(ProjectDir)\..\..\OpenCL-Headers;$(ProjectDir)\..\..\Vulkan-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ObjectFileName>$(IntDir)\$(ProjectName)\$(ProjectName)\%(RelativeDir)\</ObjectFileName>
+      <AssemblerListingLocation>$(IntDir)\$(ProjectName)\$(ProjectName)\%(RelativeDir)\</AssemblerListingLocation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>tensorflow-lite-c.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>CL_DELEGATE_NO_GL;TFLITE_KERNEL_USE_XNNPACK;TFLITE_MMAP_DISABLED;TFL_STATIC_LIBRARY_BUILD;EIGEN_NEON_GEBP_NR=4;EIGEN_MPL2_ONLY;XNN_ENABLE_ARM_FP16_VECTOR=0;XNN_ENABLE_ARM_FP16_SCALAR=0;XNN_ENABLE_ARM_BF16=0;XNN_ENABLE_ARM_DOTPROD=0;XNN_ENABLE_ARM_I8MM=0;XNN_ENABLE_RISCV_VECTOR=1;XNN_ENABLE_AVXVNNI=1;XNN_ENABLE_AVXVNNIINT8=1;XNN_ENABLE_AVX256SKX=1;XNN_ENABLE_AVX256VNNI=1;XNN_ENABLE_AVX256VNNIGFNI=1;XNN_ENABLE_AVX512VNNIGFNI=1;XNN_ENABLE_AVX512AMX=1;XNN_ENABLE_AVX512FP16=1;XNN_ENABLE_VSX=1;XNN_ENABLE_ASSEMBLY=1;XNN_ENABLE_MEMOPT=1;XNN_ENABLE_SPARSE=1;XNN_ENABLE_GEMM_M_SPECIALIZATION=1;XNN_ENABLE_DWCONV_MULTIPASS=0;XNN_ENABLE_HVX=1;XNN_ENABLE_KLEIDIAI=0;XNN_ENABLE_CPUINFO=1;XNN_LOG_LEVEL=4;FXDIV_USE_INLINE_ASSEMBLY=0;PTHREADPOOL_NO_DEPRECATED_API=1;CPUINFO_SUPPORTED_PLATFORM=1;CPUINFO_LOG_TO_STDIO=1;CPUINFO_LOG_LEVEL=2;GOOGLE_PROTOBUF_CMAKE_BUILD=1;FLATBUFFERS_LOCALE_INDEPENDENT=1;_WIN32_WINNT=0x0601;NOMINMAX=1;NOGDI=1;WIN32_LEAN_AND_MEAN=1;_CRT_SECURE_NO_WARNINGS=1;_WINDOWS;_USRDLL;NDEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..;$(ProjectDir)\..\tensorflow\lite\delegates\gpu\common;$(ProjectDir)\..\tensorflow\lite\delegates\gpu\common\task;$(ProjectDir)\..\third_party\xla;$(ProjectDir)\..\proto-cpp-out;$(ProjectDir)\..\flat-cpp-out;$(ProjectDir)\..\..\gemmlowp;$(ProjectDir)\..\..\XNNPACK\include;$(ProjectDir)\..\..\FP16\include;$(ProjectDir)\..\..\FXdiv\include;$(ProjectDir)\..\..\pthreadpool\include;$(ProjectDir)\..\..\cpuinfo\include;$(ProjectDir)\..\..\protobuf\src;$(ProjectDir)\..\..\flatbuffers\include;$(ProjectDir)\..\..\eigen;$(ProjectDir)\..\..\ruy;$(ProjectDir)\..\..\abseil-cpp;$(ProjectDir)\..\..\farmhash\src;$(ProjectDir)\..\..\OpenCL-Headers;$(ProjectDir)\..\..\Vulkan-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ObjectFileName>$(IntDir)\$(ProjectName)\$(ProjectName)\%(RelativeDir)\</ObjectFileName>
+      <AssemblerListingLocation>$(IntDir)\$(ProjectName)\$(ProjectName)\%(RelativeDir)\</AssemblerListingLocation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>tensorflow-lite-c.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>CL_DELEGATE_NO_GL;TFLITE_KERNEL_USE_XNNPACK;TFLITE_MMAP_DISABLED;TFL_STATIC_LIBRARY_BUILD;EIGEN_NEON_GEBP_NR=4;EIGEN_MPL2_ONLY;XNN_ENABLE_ARM_FP16_VECTOR=0;XNN_ENABLE_ARM_FP16_SCALAR=0;XNN_ENABLE_ARM_BF16=0;XNN_ENABLE_ARM_DOTPROD=0;XNN_ENABLE_ARM_I8MM=0;XNN_ENABLE_RISCV_VECTOR=1;XNN_ENABLE_AVXVNNI=1;XNN_ENABLE_AVXVNNIINT8=1;XNN_ENABLE_AVX256SKX=1;XNN_ENABLE_AVX256VNNI=1;XNN_ENABLE_AVX256VNNIGFNI=1;XNN_ENABLE_AVX512VNNIGFNI=1;XNN_ENABLE_AVX512AMX=1;XNN_ENABLE_AVX512FP16=1;XNN_ENABLE_VSX=1;XNN_ENABLE_ASSEMBLY=1;XNN_ENABLE_MEMOPT=1;XNN_ENABLE_SPARSE=1;XNN_ENABLE_GEMM_M_SPECIALIZATION=1;XNN_ENABLE_DWCONV_MULTIPASS=0;XNN_ENABLE_HVX=1;XNN_ENABLE_KLEIDIAI=0;XNN_ENABLE_CPUINFO=1;XNN_LOG_LEVEL=4;FXDIV_USE_INLINE_ASSEMBLY=0;PTHREADPOOL_NO_DEPRECATED_API=1;CPUINFO_SUPPORTED_PLATFORM=1;CPUINFO_LOG_TO_STDIO=1;CPUINFO_LOG_LEVEL=2;GOOGLE_PROTOBUF_CMAKE_BUILD=1;FLATBUFFERS_LOCALE_INDEPENDENT=1;_WIN32_WINNT=0x0601;NOMINMAX=1;NOGDI=1;WIN32_LEAN_AND_MEAN=1;_CRT_SECURE_NO_WARNINGS=1;_WINDOWS;_USRDLL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..;$(ProjectDir)\..\tensorflow\lite\delegates\gpu\common;$(ProjectDir)\..\tensorflow\lite\delegates\gpu\common\task;$(ProjectDir)\..\third_party\xla;$(ProjectDir)\..\proto-cpp-out;$(ProjectDir)\..\flat-cpp-out;$(ProjectDir)\..\..\gemmlowp;$(ProjectDir)\..\..\XNNPACK\include;$(ProjectDir)\..\..\FP16\include;$(ProjectDir)\..\..\FXdiv\include;$(ProjectDir)\..\..\pthreadpool\include;$(ProjectDir)\..\..\cpuinfo\include;$(ProjectDir)\..\..\protobuf\src;$(ProjectDir)\..\..\flatbuffers\include;$(ProjectDir)\..\..\eigen;$(ProjectDir)\..\..\ruy;$(ProjectDir)\..\..\abseil-cpp;$(ProjectDir)\..\..\farmhash\src;$(ProjectDir)\..\..\OpenCL-Headers;$(ProjectDir)\..\..\Vulkan-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ObjectFileName>$(IntDir)\$(ProjectName)\$(ProjectName)\%(RelativeDir)\</ObjectFileName>
+      <AssemblerListingLocation>$(IntDir)\$(ProjectName)\$(ProjectName)\%(RelativeDir)\</AssemblerListingLocation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>tensorflow-lite-c.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>CL_DELEGATE_NO_GL;TFLITE_KERNEL_USE_XNNPACK;TFLITE_MMAP_DISABLED;TFL_STATIC_LIBRARY_BUILD;EIGEN_NEON_GEBP_NR=4;EIGEN_MPL2_ONLY;XNN_ENABLE_ARM_FP16_VECTOR=0;XNN_ENABLE_ARM_FP16_SCALAR=0;XNN_ENABLE_ARM_BF16=0;XNN_ENABLE_ARM_DOTPROD=0;XNN_ENABLE_ARM_I8MM=0;XNN_ENABLE_RISCV_VECTOR=1;XNN_ENABLE_AVXVNNI=1;XNN_ENABLE_AVXVNNIINT8=1;XNN_ENABLE_AVX256SKX=1;XNN_ENABLE_AVX256VNNI=1;XNN_ENABLE_AVX256VNNIGFNI=1;XNN_ENABLE_AVX512VNNIGFNI=1;XNN_ENABLE_AVX512AMX=1;XNN_ENABLE_AVX512FP16=1;XNN_ENABLE_VSX=1;XNN_ENABLE_ASSEMBLY=1;XNN_ENABLE_MEMOPT=1;XNN_ENABLE_SPARSE=1;XNN_ENABLE_GEMM_M_SPECIALIZATION=1;XNN_ENABLE_DWCONV_MULTIPASS=0;XNN_ENABLE_HVX=1;XNN_ENABLE_KLEIDIAI=0;XNN_ENABLE_CPUINFO=1;XNN_LOG_LEVEL=4;FXDIV_USE_INLINE_ASSEMBLY=0;PTHREADPOOL_NO_DEPRECATED_API=1;CPUINFO_SUPPORTED_PLATFORM=1;CPUINFO_LOG_TO_STDIO=1;CPUINFO_LOG_LEVEL=2;GOOGLE_PROTOBUF_CMAKE_BUILD=1;FLATBUFFERS_LOCALE_INDEPENDENT=1;_WIN32_WINNT=0x0601;NOMINMAX=1;NOGDI=1;WIN32_LEAN_AND_MEAN=1;_CRT_SECURE_NO_WARNINGS=1;_WINDOWS;_USRDLL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..;$(ProjectDir)\..\tensorflow\lite\delegates\gpu\common;$(ProjectDir)\..\tensorflow\lite\delegates\gpu\common\task;$(ProjectDir)\..\third_party\xla;$(ProjectDir)\..\proto-cpp-out;$(ProjectDir)\..\flat-cpp-out;$(ProjectDir)\..\..\gemmlowp;$(ProjectDir)\..\..\XNNPACK\include;$(ProjectDir)\..\..\FP16\include;$(ProjectDir)\..\..\FXdiv\include;$(ProjectDir)\..\..\pthreadpool\include;$(ProjectDir)\..\..\cpuinfo\include;$(ProjectDir)\..\..\protobuf\src;$(ProjectDir)\..\..\flatbuffers\include;$(ProjectDir)\..\..\eigen;$(ProjectDir)\..\..\ruy;$(ProjectDir)\..\..\abseil-cpp;$(ProjectDir)\..\..\farmhash\src;$(ProjectDir)\..\..\OpenCL-Headers;$(ProjectDir)\..\..\Vulkan-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ObjectFileName>$(IntDir)\$(ProjectName)\$(ProjectName)\%(RelativeDir)\</ObjectFileName>
+      <AssemblerListingLocation>$(IntDir)\$(ProjectName)\$(ProjectName)\%(RelativeDir)\</AssemblerListingLocation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>tensorflow-lite-c.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

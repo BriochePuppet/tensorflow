@@ -46,11 +46,13 @@ limitations under the License.
 #include "tensorflow/lite/delegates/gpu/common/util.h"
 #include "vulkan/vulkan.h"  // from @vulkan_headers
 
+#ifndef CL_DELEGATE_NO_GL
 #define GL_NO_PROTOTYPES
 #define EGL_NO_PROTOTYPES
 #include "tensorflow/lite/delegates/gpu/gl/portable_gl31.h"
 #undef GL_NO_PROTOTYPES
 #undef EGL_NO_PROTOTYPES
+#endif
 
 namespace tflite {
 namespace gpu {
@@ -83,18 +85,18 @@ enum class ObjectType {
 
 struct OpenGlBuffer {
   OpenGlBuffer() = default;
-  explicit OpenGlBuffer(GLuint new_id) : id(new_id) {}
+  explicit OpenGlBuffer(cl_GLuint new_id) : id(new_id) {}
 
-  GLuint id = GL_INVALID_INDEX;
+  cl_GLuint id = 0xFFFFFFFFu;
 };
 
 struct OpenGlTexture {
   OpenGlTexture() = default;
-  OpenGlTexture(GLuint new_id, GLenum new_format)
+  OpenGlTexture(cl_GLuint new_id, cl_GLenum new_format)
       : id(new_id), format(new_format) {}
 
-  GLuint id = GL_INVALID_INDEX;
-  GLenum format = GL_INVALID_ENUM;
+  cl_GLuint id = 0xFFFFFFFFu;
+  cl_GLenum format = 0x0500;
 };
 
 struct OpenClBuffer {

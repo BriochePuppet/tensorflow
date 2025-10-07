@@ -666,18 +666,18 @@ extern PFN_clCreateSampler clCreateSampler;
 extern PFN_clEnqueueTask clEnqueueTask;
 
 // OpenGL sharing
-extern PFN_clCreateFromGLBuffer clCreateFromGLBuffer;
-extern PFN_clCreateFromGLTexture clCreateFromGLTexture;
-extern PFN_clEnqueueAcquireGLObjects clEnqueueAcquireGLObjects;
-extern PFN_clEnqueueReleaseGLObjects clEnqueueReleaseGLObjects;
+// extern PFN_clCreateFromGLBuffer clCreateFromGLBuffer;
+// extern PFN_clCreateFromGLTexture clCreateFromGLTexture;
+// extern PFN_clEnqueueAcquireGLObjects clEnqueueAcquireGLObjects;
+// extern PFN_clEnqueueReleaseGLObjects clEnqueueReleaseGLObjects;
 
 // cl_khr_egl_event extension
-extern PFN_clCreateEventFromEGLSyncKHR clCreateEventFromEGLSyncKHR;
+// extern PFN_clCreateEventFromEGLSyncKHR clCreateEventFromEGLSyncKHR;
 
 // EGL sharing
-extern PFN_clCreateFromEGLImageKHR clCreateFromEGLImageKHR;
-extern PFN_clEnqueueAcquireEGLObjectsKHR clEnqueueAcquireEGLObjectsKHR;
-extern PFN_clEnqueueReleaseEGLObjectsKHR clEnqueueReleaseEGLObjectsKHR;
+// extern PFN_clCreateFromEGLImageKHR clCreateFromEGLImageKHR;
+// extern PFN_clEnqueueAcquireEGLObjectsKHR clEnqueueAcquireEGLObjectsKHR;
+// extern PFN_clEnqueueReleaseEGLObjectsKHR clEnqueueReleaseEGLObjectsKHR;
 
 // cl_khr_command_buffer extension
 extern PFN_clCreateCommandBufferKHR clCreateCommandBufferKHR;

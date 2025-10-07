@@ -103,7 +103,15 @@ void LoadOpenCLFunctions(void* libopencl, bool use_wrapper);
 
 absl::Status LoadOpenCL() {
 #ifdef __WINDOWS__
-  HMODULE libopencl = LoadLibraryA("OpenCL.dll");
+  constexpr wchar_t const *const libopencl_name = L"OpenCL.dll";
+
+  HMODULE libopencl = GetModuleHandleW(libopencl_name);
+  if (NULL == libopencl)
+  {
+    assert(ERROR_MOD_NOT_FOUND == GetLastError());
+    libopencl = LoadLibraryW(L"OpenCL.dll");
+  }
+
   if (libopencl) {
     LoadOpenCLFunctions(libopencl);
     return absl::OkStatus();
@@ -296,18 +304,18 @@ void LoadOpenCLFunctions(void* libopencl, bool use_wrapper) {
   LoadFunction(clEnqueueTask);
 
   // OpenGL sharing
-  LoadFunction(clCreateFromGLBuffer);
-  LoadFunction(clCreateFromGLTexture);
-  LoadFunction(clEnqueueAcquireGLObjects);
-  LoadFunction(clEnqueueReleaseGLObjects);
+  // LoadFunction(clCreateFromGLBuffer);
+  // LoadFunction(clCreateFromGLTexture);
+  // LoadFunction(clEnqueueAcquireGLObjects);
+  // LoadFunction(clEnqueueReleaseGLObjects);
 
   // cl_khr_egl_event extension
-  LoadFunction(clCreateEventFromEGLSyncKHR);
+  // LoadFunction(clCreateEventFromEGLSyncKHR);
 
   // EGL sharing
-  LoadFunction(clCreateFromEGLImageKHR);
-  LoadFunction(clEnqueueAcquireEGLObjectsKHR);
-  LoadFunction(clEnqueueReleaseEGLObjectsKHR);
+  // LoadFunction(clCreateFromEGLImageKHR);
+  // LoadFunction(clEnqueueAcquireEGLObjectsKHR);
+  // LoadFunction(clEnqueueReleaseEGLObjectsKHR);
 
   LoadQcomExtensionFunctions();
 }
@@ -417,18 +425,18 @@ PFN_clCreateSampler clCreateSampler;
 PFN_clEnqueueTask clEnqueueTask;
 
 // OpenGL sharing
-PFN_clCreateFromGLBuffer clCreateFromGLBuffer;
-PFN_clCreateFromGLTexture clCreateFromGLTexture;
-PFN_clEnqueueAcquireGLObjects clEnqueueAcquireGLObjects;
-PFN_clEnqueueReleaseGLObjects clEnqueueReleaseGLObjects;
+// PFN_clCreateFromGLBuffer clCreateFromGLBuffer;
+// PFN_clCreateFromGLTexture clCreateFromGLTexture;
+// PFN_clEnqueueAcquireGLObjects clEnqueueAcquireGLObjects;
+// PFN_clEnqueueReleaseGLObjects clEnqueueReleaseGLObjects;
 
 // cl_khr_egl_event extension
-PFN_clCreateEventFromEGLSyncKHR clCreateEventFromEGLSyncKHR;
+// PFN_clCreateEventFromEGLSyncKHR clCreateEventFromEGLSyncKHR;
 
 // EGL sharing
-PFN_clCreateFromEGLImageKHR clCreateFromEGLImageKHR;
-PFN_clEnqueueAcquireEGLObjectsKHR clEnqueueAcquireEGLObjectsKHR;
-PFN_clEnqueueReleaseEGLObjectsKHR clEnqueueReleaseEGLObjectsKHR;
+// PFN_clCreateFromEGLImageKHR clCreateFromEGLImageKHR;
+// PFN_clEnqueueAcquireEGLObjectsKHR clEnqueueAcquireEGLObjectsKHR;
+// PFN_clEnqueueReleaseEGLObjectsKHR clEnqueueReleaseEGLObjectsKHR;
 
 // cl_khr_command_buffer extension
 PFN_clCreateCommandBufferKHR clCreateCommandBufferKHR;
@@ -439,7 +447,7 @@ PFN_clEnqueueCommandBufferKHR clEnqueueCommandBufferKHR;
 PFN_clCommandNDRangeKernelKHR clCommandNDRangeKernelKHR;
 PFN_clGetCommandBufferInfoKHR clGetCommandBufferInfoKHR;
 
-DEFINE_QCOM_FUNCTION_PTRS
+// DEFINE_QCOM_FUNCTION_PTRS
 
 cl_mem CreateImage2DLegacy(cl_context context, cl_mem_flags flags,
                            const cl_image_format* image_format,

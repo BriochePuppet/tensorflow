@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\tensorflow\lite\c\c_api_opaque_internal.cc">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\c\common_internal.cc">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>build-windows</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{03bd68a5-0dd8-4416-8c06-6b16c3aba0fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="build-windows">
+      <UniqueIdentifier>{3bb7c30f-5b61-4184-9737-3c12bdb22ebd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tensorflow-lite-c.def">
+      <Filter>build-windows</Filter>
+    </None>
+  </ItemGroup>
+</Project>

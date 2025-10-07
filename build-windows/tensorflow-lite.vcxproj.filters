@@ -1,0 +1,1432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="proto-cpp-out">
+      <UniqueIdentifier>{b5f54f3d-0124-4a02-bc76-538c1ef08666}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party">
+      <UniqueIdentifier>{dad2ba0d-0218-4dcc-9069-757fdbc68d00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\fft2d">
+      <UniqueIdentifier>{b4de8605-cbeb-4136-91fd-5ef79b429ba8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\fft2d\fft2d_shrtdct">
+      <UniqueIdentifier>{ce568688-de71-40e7-a611-8ab1ab4173cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\fft2d\fft2d_alloc">
+      <UniqueIdentifier>{5828ec33-a0a2-4819-bb9a-dbeeba557297}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\fft2d\fft2d_fft4f2d">
+      <UniqueIdentifier>{233dfdae-3b32-4e05-aee8-7c126525d324}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\fft2d\fft2d_fftsg">
+      <UniqueIdentifier>{ad080566-72b9-4ee1-960b-ad5162fd6fd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\fft2d\fft2d_fftsg2d">
+      <UniqueIdentifier>{78ed21d3-469f-48e9-8799-0ea56aaeefd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\fft2d\fft2d_fftsg3d">
+      <UniqueIdentifier>{e3d2b377-a824-4d22-bee2-d5ffffa4ab46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\farmhash">
+      <UniqueIdentifier>{3e223e64-f5ad-4936-90a2-aadca6c52a5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\eight_bit_int_gemm">
+      <UniqueIdentifier>{c8b926c1-18dd-4e38-a5cb-b253a4256746}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{26ccadde-a993-4a98-86da-2e8b8435d454}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tensorflow-lite">
+      <UniqueIdentifier>{1c277918-7967-4f53-85bd-851baa3c19d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\xnnpack-delegate">
+      <UniqueIdentifier>{2e855399-c4d1-4df1-8605-59745f6e4321}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\mediapipe">
+      <UniqueIdentifier>{6daf55da-e736-4772-bf73-a8c812c5390b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy">
+      <UniqueIdentifier>{15572cac-2f0f-46ce-87e8-139f0f81d701}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_allocator">
+      <UniqueIdentifier>{a3faee52-aecd-46bc-af84-c990c74f11f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_apply_multiplier">
+      <UniqueIdentifier>{a88f4623-a6a9-4aa7-b0da-c738d775bae6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_block_map">
+      <UniqueIdentifier>{68d27be8-4436-4aad-9733-84d0c03a6e7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_blocking_counter">
+      <UniqueIdentifier>{3b2ef480-d19a-4930-921d-5ab2e83fcc4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_context">
+      <UniqueIdentifier>{4d741ee3-17ca-437a-898c-fd0fad8efa5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_context_get_ctx">
+      <UniqueIdentifier>{386459ab-6b5f-4c1e-a924-8a466fa937af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_cpuinfo">
+      <UniqueIdentifier>{1c1b3621-8c92-4819-83b0-0ad4a7476608}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_ctx">
+      <UniqueIdentifier>{a7b13e8f-4975-4e53-8a17-458e321636dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_denormal">
+      <UniqueIdentifier>{6ae58b97-55e1-4f59-a151-95eb6aad7572}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_frontend">
+      <UniqueIdentifier>{9dedc226-8a70-437a-874e-abe77ff4c7d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_have_built_path_for_avx">
+      <UniqueIdentifier>{a2ced7d4-c219-49c7-af06-7fa08ff29162}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_have_built_path_for_avx2_fma">
+      <UniqueIdentifier>{3388d2e1-ba4c-4331-9567-227b2e9512e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_have_built_path_for_avx512">
+      <UniqueIdentifier>{69f36b52-7463-40fc-9941-648122f4971a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_kernel_arm">
+      <UniqueIdentifier>{4be6b18e-ee1d-4d9f-87f3-d89a08ac18b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_kernel_avx">
+      <UniqueIdentifier>{1dbdd486-da23-4499-aa3f-547b4ce1a3f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_kernel_avx2_fma">
+      <UniqueIdentifier>{ddb44991-fa2c-4451-9be2-caa50e8009df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_kernel_avx512">
+      <UniqueIdentifier>{897c74ea-14d3-4bef-9808-69d08fa7f625}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_pack_arm">
+      <UniqueIdentifier>{db9eb7cd-01b9-4323-9899-5916e72c145b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_pack_avx">
+      <UniqueIdentifier>{7357f957-df86-4e38-9778-3812172397c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_pack_avx2_fma">
+      <UniqueIdentifier>{74194aa3-eb37-427e-8773-83d9042736af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_pack_avx512">
+      <UniqueIdentifier>{bc5888ff-7406-46cd-a0dd-28bfa6c34486}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_prepacked_cache">
+      <UniqueIdentifier>{4c9712bd-1ca4-4abe-8ba0-b4af5441ef23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_prepare_packed_matrices">
+      <UniqueIdentifier>{8706e0a7-009e-4e99-b2fd-8ce03e402fd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_profiler_instrumentation">
+      <UniqueIdentifier>{d0bf069d-fe5d-45bd-8076-125149abe88a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_system_aligned_alloc">
+      <UniqueIdentifier>{db1f40f9-7f74-4023-8bb7-3db58cf7dc13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_thread_pool">
+      <UniqueIdentifier>{56b7ec20-f4d7-49d1-be5d-00bcc8310b43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_trmul">
+      <UniqueIdentifier>{a4a2bdcd-d2ce-4f26-bb35-bd73f7c051ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_tune">
+      <UniqueIdentifier>{f619850e-ef23-482b-ab17-633319d05474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\ruy\ruy_wait">
+      <UniqueIdentifier>{f1d2ae89-d167-4dea-95f1-cd536a233af1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\tensorflow\lite\delegates\xnnpack\file_util.cc">
+      <Filter>source\xnnpack-delegate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\xnnpack\quantization_util.cc">
+      <Filter>source\xnnpack-delegate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\xnnpack\weight_cache.cc">
+      <Filter>source\xnnpack-delegate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\xnnpack\xnnpack_delegate.cc">
+      <Filter>source\xnnpack-delegate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\activations.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\add.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\add.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\transformations\add_bias.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\add_n.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\transformations\add_quant_adjustments.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\compiler\mlir\lite\allocation.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\experimental\acceleration\compatibility\android_info.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\api.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\api.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\arena_planner.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\arg_min_max.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\task\arguments.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\array.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\assign_variable.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\async\c\async_kernel.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\async\async_signature_runner.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\async\c\async_signature_runner.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\async\async_subgraph.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\atan2.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\atan2_custom.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\async\interop\c\attribute_map.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\async\interop\attribute_map_internal.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\audio_spectrogram.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\basic_rnn.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\batch_matmul.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\batch_to_space_nd.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\bidirectional_sequence_lstm.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\bidirectional_sequence_rnn.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\bitcast.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\bitwise_xor.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\broadcast_args.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\broadcast_to.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\bucketize.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\buffer.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\task\buffer_desc.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\c\c_api.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\c\c_api_experimental.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\c\c_api_for_testing.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\c\c_api_opaque.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\c\c_api_opaque_internal.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\experimental\resource\cache_buffer.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\call_once.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\cast.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\cast.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\ceil.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\cl_arguments.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\cl_command_buffer.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\cl_command_queue.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\cl_context.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\cl_device.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\cl_event.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\cl_image_format.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\cl_kernel.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\cl_memory.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\cl_operation.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\cl_program.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\c\common.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\common.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\c\common_internal.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\reference\comparisons.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\comparisons.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\complex_support.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\concat_xy.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\concat_z.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\concatenation.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\async\interop\c\constants.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\control_flow_common.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\conv.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\conv_constants.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\conv_generic.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\conv_metal_simd.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\special\conv_pointwise.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\conv_weights_converter.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\conv3d.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\conv3d_transpose.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\conversion.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\convert.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\kernels\converter.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\selectors\default\convolution_selector.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\convolution_transposed.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\convolution_transposed_3x3.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\convolution_transposed_3x3_thin.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\convolution_transposed_4x4.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\selectors\default\convolution_transposed_selector.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\convolution_transposed_thin.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\cpu_backend_context.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\cpu_backend_gemm_eigen.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\optimized\cpu_check.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\create_op_resolver_with_builtin_ops.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\cumsum.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\cumsum.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\default\custom_parsers.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\default\custom_transformations.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\data_type.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\selectors\default\default_selector.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\delegate.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\delegate_options.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\acceleration\configuration\delegate_registry.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\densify.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\deprecated_backends.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\depth_to_space.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\depthwise_conv.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\depthwise_conv.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\depthwise_conv_3x3.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\depthwise_conv_3x3_stride_h2.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\dequantize.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\detection_postprocess.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\dilate.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\div.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\selectors\default\dw_convolution_selector.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\special\dw7x7_conv2to6_concat_conv8to8.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\dynamic_update_slice.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\eigen_support.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\elementwise.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\elementwise.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\embedding_lookup.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\embedding_lookup_sparse.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\environment.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\compiler\mlir\lite\core\api\error_reporter.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\exp.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\expand_dims.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\external_cpu_backend_context.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\external\external_delegate.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\fake_quant.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\special\fc_fc_add.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\fill.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\api\flatbuffer_conversions.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\floor.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\floor_div.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\floor_mod.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\flops_util.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\fully_connected.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\fully_connected.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\optimized\4bit\fully_connected_reference.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\selectors\default\fully_connected_selector.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\transformations\fuse_add_to_conv.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\transformations\fuse_mul_to_conv.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\gather.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\gather.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\gather_nd.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\transformations\global_pooling_to_reduce_op.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\tools\versioning\gpu_compatibility.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\gpu_info.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\gpu_model.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\task\gpu_operation.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\graph_info.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\memory_management\greedy_by_breadth_assignment.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\memory_management\greedy_by_size_assignment.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\gru_cell.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\hashtable.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\hashtable_find.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\hashtable_import.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\hashtable_lookup.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\hashtable_size.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\if.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\inference_context.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\experimental\resource\initialization_status.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\memory_management\internal.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\interpreter.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\interpreter_builder.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\interpreter_experimental.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\interpreter_utils.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\irfft2d.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\kernel_util.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\kernel_utils.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\l2norm.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\local_response_norm.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\logger.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\logical.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\lsh_projection.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\lstm.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\lstm.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\lstm_eval.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\lstm_parser.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\transformations\make_fully_connected.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\transformations\make_padding.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\matrix_diag.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\matrix_set_diag.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\max_unpooling.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\maximum_minimum.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\mean_stddev_normalization.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\memory_management.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\transformations\merge_densify.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\transformations\merge_padding_with.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\compiler\mlir\lite\experimental\remat\metadata_util.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\mfcc.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\mfcc.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\mfcc_dct.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\mfcc_mel_filterbank.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\memory_management\min_cost_flow_assignment.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\minimal_logging.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\minimal_logging_default.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\mirror_pad.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\compiler\mlir\lite\mmap_allocation_disabled.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\model.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\model_builder.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\compiler\mlir\lite\core\model_builder_base.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\model_builder_helper.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\transformations\model_transformations.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\model_transformer.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\mul.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\multinomial.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\mutable_op_resolver.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\mutable_op_resolver_utils.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\neg.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\optimized\neon_tensor_utils.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\nnapi\nnapi_delegate_disabled.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\nnapi\nnapi_implementation_disabled.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\acceleration\configuration\nnapi_plugin.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\non_max_suppression.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\numeric_verify.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\object_reader.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\one_hot.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\one_hot.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\api\op_resolver.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\tools\versioning\op_signature.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\opaque_tensor_ctypes.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\opencl_wrapper.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\operation_parser.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\selectors\operation_selector.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\operations.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\c\operator.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\optional_debug_tools.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\pack.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\pad.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\padding.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\profiling\platform_profiler.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\pooling.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\pooling.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\pooling3d.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\portable_tensor_utils.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\reference\portable_tensor_utils.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\pow.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\precision.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\prelu.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\profiling\telemetry\profiler.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\task\profiling_info.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\program_cache.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\qcom_thin_filter.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\task\qcom_thin_filter_desc.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\quantization_util.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\quantization_util.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\quantize.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\quantize_and_dequantize.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\random_ops.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\random_standard_normal_custom.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\random_uniform_custom.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\range.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\rank.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\read_variable.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\async\interop\reconcile_fns.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\default\recordable_queue.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\reduce.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\reduce.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\kernels\register.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\register_ref.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\relu.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\transformations\remove_noop.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\resampler.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\reshape.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\reshape.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\reshapex4.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\resize.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\resize_bilinear.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\resize_nearest_neighbor.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\experimental\resource\resource_variable.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\reverse.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\reverse_sequence.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\rfft2d.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\right_shift.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\rng_bit_generator.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\rng_util.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\roll.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\profiling\root_profiler.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\round.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\runtime_shape.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\scatter_nd.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\compiler\mlir\lite\schema\schema_utils.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\segment_sum.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\select.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\select_v2.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\serialization.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\task\serialization_base.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\shape.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\shape.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\sign.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\sign_custom.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\signature_runner.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\simple_memory_arena.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\simple_memory_arena_debug_dump.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\simple_planner.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\selectors\simple_selectors.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\skip_gram.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\slice.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\softmax.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\softmax1x1.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\space_to_batch_nd.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\space_to_depth.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\space_to_depth.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\sparse_to_dense.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\utils\sparsity_format_converter.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\selectors\special_selector.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\spectrogram.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\split.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\split.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\split_v.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\squared_difference.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\squeeze.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\optimized\sse_tensor_utils.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\acceleration\configuration\stable_delegate_registry.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\stablehlo_add.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\stablehlo_and.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\stablehlo_composite.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\stablehlo_elementwise.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\stablehlo_gather.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\stablehlo_min_max.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\stablehlo_multiply.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\stablehlo_pad.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\stablehlo_reduce_window.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\stablehlo_scatter.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\stablehlo_shift_left.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\experimental\resource\static_hashtable.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\stderr_reporter.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\strided_slice.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\strided_slice.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\string_util.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\compiler\mlir\lite\utils\string_utils.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\sub.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\subgraph.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\selectors\subgraph.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\svdf.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\table.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\async\c\task.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\async\task_internal.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\profiling\telemetry\telemetry.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\telemetry.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\profiling\telemetry\c\telemetry_setting_internal.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\tensor.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\tensor_ctypes.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\task\tensor_desc.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\tensor_slice_util.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\tensor_type_util.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\api\tensor_utils.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\tensor_utils.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\tensorflow_profiler_logger_shim.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\task\testing_util.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\tflite_profile.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\tflite_with_xnnpack_optional.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\special\thin_pointwise_fuser.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\tile.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\tile.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\topk_v2.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\transpose.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\transpose.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\transpose_conv.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\internal\transpose_utils.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\async\interop\c\types.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\memory_management\types.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\unidirectional_sequence_gru.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\unidirectional_sequence_lstm.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\unidirectional_sequence_rnn.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\unique.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\unpack.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\unsorted_segment.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\task\util.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\util.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\cl\default\util.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\util.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\utils.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\var_handle.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\async\interop\variant.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\tools\verifier.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\core\tools\verifier_internal.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\task\weights_conversion.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\task\weights_layout.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\where.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\while.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\tasks\winograd.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\winograd_util.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\task\work_group_picking.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\workgroup_selection.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\kernels\zeros_like.cc">
+      <Filter>source\tensorflow-lite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\tensorflow\lite\profiling\proto\profiling_info.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\tensorflow\lite\profiling\proto\model_runtime_info.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\farmhash\src\farmhash.cc">
+      <Filter>third_party\farmhash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gemmlowp\eight_bit_int_gemm\eight_bit_int_gemm.cc">
+      <Filter>third_party\eight_bit_int_gemm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OouraFFT\alloc.c">
+      <Filter>third_party\fft2d\fft2d_alloc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OouraFFT\fft4f2d.c">
+      <Filter>third_party\fft2d\fft2d_fft4f2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OouraFFT\fftsg.c">
+      <Filter>third_party\fft2d\fft2d_fftsg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OouraFFT\fftsg2d.c">
+      <Filter>third_party\fft2d\fft2d_fftsg2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OouraFFT\fftsg3d.c">
+      <Filter>third_party\fft2d\fft2d_fftsg3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OouraFFT\shrtdct.c">
+      <Filter>third_party\fft2d\fft2d_shrtdct</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\mediapipe\landmarks_to_transform_matrix.cc">
+      <Filter>source\mediapipe</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\mediapipe\transform_landmarks.cc">
+      <Filter>source\mediapipe</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tensorflow\lite\delegates\gpu\common\mediapipe\transform_tensor_bilinear.cc">
+      <Filter>source\mediapipe</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\allocator.cc">
+      <Filter>third_party\ruy\ruy_allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\apply_multiplier.cc">
+      <Filter>third_party\ruy\ruy_apply_multiplier</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\block_map.cc">
+      <Filter>third_party\ruy\ruy_block_map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\blocking_counter.cc">
+      <Filter>third_party\ruy\ruy_blocking_counter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\context.cc">
+      <Filter>third_party\ruy\ruy_context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\context_get_ctx.cc">
+      <Filter>third_party\ruy\ruy_context_get_ctx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\cpuinfo.cc">
+      <Filter>third_party\ruy\ruy_cpuinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\ctx.cc">
+      <Filter>third_party\ruy\ruy_ctx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\denormal.cc">
+      <Filter>third_party\ruy\ruy_denormal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\frontend.cc">
+      <Filter>third_party\ruy\ruy_frontend</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\have_built_path_for_avx.cc">
+      <Filter>third_party\ruy\ruy_have_built_path_for_avx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\have_built_path_for_avx2_fma.cc">
+      <Filter>third_party\ruy\ruy_have_built_path_for_avx2_fma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\have_built_path_for_avx512.cc">
+      <Filter>third_party\ruy\ruy_have_built_path_for_avx512</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\kernel_arm32.cc">
+      <Filter>third_party\ruy\ruy_kernel_arm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\kernel_arm64.cc">
+      <Filter>third_party\ruy\ruy_kernel_arm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\kernel_avx.cc">
+      <Filter>third_party\ruy\ruy_kernel_avx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\kernel_avx2_fma.cc">
+      <Filter>third_party\ruy\ruy_kernel_avx2_fma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\kernel_avx512.cc">
+      <Filter>third_party\ruy\ruy_kernel_avx512</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\pack_arm.cc">
+      <Filter>third_party\ruy\ruy_pack_arm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\pack_avx.cc">
+      <Filter>third_party\ruy\ruy_pack_avx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\pack_avx2_fma.cc">
+      <Filter>third_party\ruy\ruy_pack_avx2_fma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\pack_avx512.cc">
+      <Filter>third_party\ruy\ruy_pack_avx512</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\prepacked_cache.cc">
+      <Filter>third_party\ruy\ruy_prepacked_cache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\prepare_packed_matrices.cc">
+      <Filter>third_party\ruy\ruy_prepare_packed_matrices</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\profiler\instrumentation.cc">
+      <Filter>third_party\ruy\ruy_profiler_instrumentation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\system_aligned_alloc.cc">
+      <Filter>third_party\ruy\ruy_system_aligned_alloc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\thread_pool.cc">
+      <Filter>third_party\ruy\ruy_thread_pool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\trmul.cc">
+      <Filter>third_party\ruy\ruy_trmul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\tune.cc">
+      <Filter>third_party\ruy\ruy_tune</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ruy\ruy\wait.cc">
+      <Filter>third_party\ruy\ruy_wait</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

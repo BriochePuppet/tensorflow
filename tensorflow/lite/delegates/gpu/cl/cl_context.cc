@@ -136,7 +136,12 @@ bool CLContext::IsFloatTexture2DSupported(int num_channels, DataType data_type,
 }
 
 absl::Status CreateCLContext(const CLDevice& device, CLContext* result) {
-  return CreateCLContext(device, nullptr, result);
+  cl_context_properties properties[] =
+      {
+          CL_CONTEXT_PLATFORM,
+          reinterpret_cast<cl_context_properties>(device.platform()),
+          0};
+  return CreateCLContext(device, properties, result);
 }
 
 absl::Status CreateCLGLContext(const CLDevice& device,
