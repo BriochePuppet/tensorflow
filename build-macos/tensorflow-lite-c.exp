@@ -1,0 +1,109 @@
+#
+# Copyright (C) YuqiaoZhang(HanetakaChou)
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Lesser General Public License as published
+# by the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Lesser General Public License for more details.
+# 
+# You should have received a copy of the GNU Lesser General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#
+
+_TfLiteExtensionApisVersion
+_TfLiteXNNPackDelegateOptionsDefault
+_TfLiteXNNPackDelegateCreate
+_TfLiteXNNPackDelegateDelete
+_TfLiteGpuDelegateOptionsV2Default
+_TfLiteGpuDelegateV2Create
+_TfLiteGpuDelegateV2Delete
+_TfLiteInterpreterAllocateTensors
+_TfLiteInterpreterCancel
+_TfLiteInterpreterCreate
+_TfLiteInterpreterCreateWithSelectedOps
+_TfLiteInterpreterDelete
+_TfLiteInterpreterEnsureTensorDataIsReadable
+_TfLiteInterpreterGetBufferHandle
+_TfLiteInterpreterGetInputTensor
+_TfLiteInterpreterGetInputTensorCount
+_TfLiteInterpreterGetInputTensorIndex
+_TfLiteInterpreterGetOutputTensor
+_TfLiteInterpreterGetOutputTensorCount
+_TfLiteInterpreterGetOutputTensorIndex
+_TfLiteInterpreterGetSignatureCount
+_TfLiteInterpreterGetSignatureKey
+_TfLiteInterpreterGetSignatureRunner
+_TfLiteInterpreterGetTensor
+_TfLiteInterpreterGetVariableTensor
+_TfLiteInterpreterGetVariableTensorCount
+_TfLiteInterpreterInputTensorIndices
+_TfLiteInterpreterInvoke
+_TfLiteInterpreterModifyGraphWithDelegate
+_TfLiteInterpreterOptionsAddBuiltinOp
+_TfLiteInterpreterOptionsAddCustomOp
+_TfLiteInterpreterOptionsAddDelegate
+_TfLiteInterpreterOptionsAddOperator
+_TfLiteInterpreterOptionsCopy
+_TfLiteInterpreterOptionsCreate
+_TfLiteInterpreterOptionsDelete
+_TfLiteInterpreterOptionsEnableCancellation
+_TfLiteInterpreterOptionsSetEnableDelegateFallback
+_TfLiteInterpreterOptionsSetErrorReporter
+_TfLiteInterpreterOptionsSetNumThreads
+_TfLiteInterpreterOptionsSetTelemetryProfiler
+_TfLiteInterpreterOptionsSetUseNNAPI
+_TfLiteInterpreterOutputTensorIndices
+_TfLiteInterpreterResetVariableTensors
+_TfLiteInterpreterResizeInputTensor
+_TfLiteInterpreterSetBufferHandle
+_TfLiteInterpreterSetCustomAllocationForTensor
+_TfLiteModelCreate
+_TfLiteModelCreateFromFile
+_TfLiteModelCreateFromFileWithErrorReporter
+_TfLiteModelCreateWithErrorReporter
+_TfLiteModelDelete
+_TfLiteOperatorCreate
+_TfLiteOperatorDelete
+_TfLiteOperatorGetBuiltInCode
+_TfLiteOperatorGetCustomName
+_TfLiteOperatorGetUserData
+_TfLiteOperatorGetVersion
+_TfLiteOperatorSetAsyncKernel
+_TfLiteOperatorSetAsyncKernelWithData
+_TfLiteOperatorSetFree
+_TfLiteOperatorSetFreeWithData
+_TfLiteOperatorSetInit
+_TfLiteOperatorSetInitWithData
+_TfLiteOperatorSetInplaceOperator
+_TfLiteOperatorSetInvoke
+_TfLiteOperatorSetInvokeWithData
+_TfLiteOperatorSetPrepare
+_TfLiteOperatorSetPrepareWithData
+_TfLiteSchemaVersion
+_TfLiteSetAllowBufferHandleOutput
+_TfLiteSignatureRunnerAllocateTensors
+_TfLiteSignatureRunnerCancel
+_TfLiteSignatureRunnerDelete
+_TfLiteSignatureRunnerGetInputCount
+_TfLiteSignatureRunnerGetInputName
+_TfLiteSignatureRunnerGetInputTensor
+_TfLiteSignatureRunnerGetOutputCount
+_TfLiteSignatureRunnerGetOutputName
+_TfLiteSignatureRunnerGetOutputTensor
+_TfLiteSignatureRunnerInvoke
+_TfLiteSignatureRunnerResizeInputTensor
+_TfLiteTensorByteSize
+_TfLiteTensorCopyFromBuffer
+_TfLiteTensorCopyToBuffer
+_TfLiteTensorData
+_TfLiteTensorDim
+_TfLiteTensorName
+_TfLiteTensorNumDims
+_TfLiteTensorQuantizationParams
+_TfLiteTensorType
+_TfLiteVersion

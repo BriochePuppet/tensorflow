@@ -35,7 +35,7 @@ _DELEGATE_NO_GL_DEPS = select({
     ],
     "//conditions:default": [],
 }) + [
-    ":android_hardware_buffer",
+    # ":android_hardware_buffer",
     ":api",
     ":delegate_options",
     ":tflite_profile",
