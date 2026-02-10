@@ -20,7 +20,9 @@ limitations under the License.
 #define EGL_NO_PROTOTYPES
 #endif
 
+#ifndef CL_DELEGATE_NO_GL
 #include <EGL/egl.h>
+#endif
 
 #include <cstdint>
 #include <memory>
@@ -114,6 +116,13 @@ struct InferenceEnvironmentOptions {
   cl_context context = nullptr;
   cl_command_queue command_queue = nullptr;
 
+  // Should contain data returned from
+  // InferenceEnvironment::GetSerializedBinaryCache method.
+  // Invalid or incompatible data will be discarded. Compiled binary may become
+  // incompatible when GPU driver is updated.
+  absl::Span<const uint8_t> serialized_binary_cache;
+
+#ifndef CL_DELEGATE_NO_GL
   // Whenever input and/or output is GL object, EGL display and context must be
   // set to create GL aware OpenCL context. Do not set these variables whenever
   // GL interoperability is not needed.
@@ -123,15 +132,14 @@ struct InferenceEnvironmentOptions {
   EGLDisplay egl_display = EGL_NO_DISPLAY;
   EGLContext egl_context = EGL_NO_CONTEXT;
 
-  // Should contain data returned from
-  // InferenceEnvironment::GetSerializedBinaryCache method.
-  // Invalid or incompatible data will be discarded. Compiled binary may become
-  // incompatible when GPU driver is updated.
-  absl::Span<const uint8_t> serialized_binary_cache;
-
   bool IsGlAware() const {
     return egl_context != EGL_NO_CONTEXT && egl_display != EGL_NO_DISPLAY;
   }
+#else
+  bool IsGlAware() const {
+    return false;
+  }
+#endif
 };
 
 // Creates new OpenCL environment that needs to stay around until all inference

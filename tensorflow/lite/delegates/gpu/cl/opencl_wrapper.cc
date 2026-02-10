@@ -103,7 +103,15 @@ void LoadOpenCLFunctions(void* libopencl, bool use_wrapper);
 
 absl::Status LoadOpenCL() {
 #ifdef __WINDOWS__
-  HMODULE libopencl = LoadLibraryA("OpenCL.dll");
+  constexpr wchar_t const *const libopencl_name = L"OpenCL.dll";
+
+  HMODULE libopencl = GetModuleHandleW(libopencl_name);
+  if (NULL == libopencl)
+  {
+    assert(ERROR_MOD_NOT_FOUND == GetLastError());
+    libopencl = LoadLibraryW(L"OpenCL.dll");
+  }
+
   if (libopencl) {
     LoadOpenCLFunctions(libopencl);
     return absl::OkStatus();
@@ -205,24 +213,18 @@ void LoadOpenCLFunctions(void* libopencl, bool use_wrapper) {
   LoadFunction(clRetainContext);
   LoadFunction(clReleaseContext);
   LoadFunction(clGetContextInfo);
-  LoadFunction(clCreateCommandQueueWithProperties);
   LoadFunction(clRetainCommandQueue);
   LoadFunction(clReleaseCommandQueue);
   LoadFunction(clGetCommandQueueInfo);
   LoadFunction(clCreateBuffer);
   LoadFunction(clCreateSubBuffer);
   LoadFunction(clCreateImage);
-  LoadFunction(clCreatePipe);
   LoadFunction(clRetainMemObject);
   LoadFunction(clReleaseMemObject);
   LoadFunction(clGetSupportedImageFormats);
   LoadFunction(clGetMemObjectInfo);
   LoadFunction(clGetImageInfo);
-  LoadFunction(clGetPipeInfo);
   LoadFunction(clSetMemObjectDestructorCallback);
-  LoadFunction(clSVMAlloc);
-  LoadFunction(clSVMFree);
-  LoadFunction(clCreateSamplerWithProperties);
   LoadFunction(clRetainSampler);
   LoadFunction(clReleaseSampler);
   LoadFunction(clGetSamplerInfo);
@@ -242,8 +244,6 @@ void LoadOpenCLFunctions(void* libopencl, bool use_wrapper) {
   LoadFunction(clRetainKernel);
   LoadFunction(clReleaseKernel);
   LoadFunction(clSetKernelArg);
-  LoadFunction(clSetKernelArgSVMPointer);
-  LoadFunction(clSetKernelExecInfo);
   LoadFunction(clGetKernelInfo);
   LoadFunction(clGetKernelArgInfo);
   LoadFunction(clGetKernelWorkGroupInfo);
@@ -278,11 +278,6 @@ void LoadOpenCLFunctions(void* libopencl, bool use_wrapper) {
   LoadFunction(clEnqueueNativeKernel);
   LoadFunction(clEnqueueMarkerWithWaitList);
   LoadFunction(clEnqueueBarrierWithWaitList);
-  LoadFunction(clEnqueueSVMFree);
-  LoadFunction(clEnqueueSVMMemcpy);
-  LoadFunction(clEnqueueSVMMemFill);
-  LoadFunction(clEnqueueSVMMap);
-  LoadFunction(clEnqueueSVMUnmap);
   LoadFunction(clGetExtensionFunctionAddressForPlatform);
   LoadFunction(clCreateImage2D);
   LoadFunction(clCreateImage3D);
@@ -294,20 +289,6 @@ void LoadOpenCLFunctions(void* libopencl, bool use_wrapper) {
   LoadFunction(clCreateCommandQueue);
   LoadFunction(clCreateSampler);
   LoadFunction(clEnqueueTask);
-
-  // OpenGL sharing
-  LoadFunction(clCreateFromGLBuffer);
-  LoadFunction(clCreateFromGLTexture);
-  LoadFunction(clEnqueueAcquireGLObjects);
-  LoadFunction(clEnqueueReleaseGLObjects);
-
-  // cl_khr_egl_event extension
-  LoadFunction(clCreateEventFromEGLSyncKHR);
-
-  // EGL sharing
-  LoadFunction(clCreateFromEGLImageKHR);
-  LoadFunction(clEnqueueAcquireEGLObjectsKHR);
-  LoadFunction(clEnqueueReleaseEGLObjectsKHR);
 
   LoadQcomExtensionFunctions();
 }
@@ -325,24 +306,18 @@ PFN_clCreateContextFromType clCreateContextFromType;
 PFN_clRetainContext clRetainContext;
 PFN_clReleaseContext clReleaseContext;
 PFN_clGetContextInfo clGetContextInfo;
-PFN_clCreateCommandQueueWithProperties clCreateCommandQueueWithProperties;
 PFN_clRetainCommandQueue clRetainCommandQueue;
 PFN_clReleaseCommandQueue clReleaseCommandQueue;
 PFN_clGetCommandQueueInfo clGetCommandQueueInfo;
 PFN_clCreateBuffer clCreateBuffer;
 PFN_clCreateSubBuffer clCreateSubBuffer;
 PFN_clCreateImage clCreateImage;
-PFN_clCreatePipe clCreatePipe;
 PFN_clRetainMemObject clRetainMemObject;
 PFN_clReleaseMemObject clReleaseMemObject;
 PFN_clGetSupportedImageFormats clGetSupportedImageFormats;
 PFN_clGetMemObjectInfo clGetMemObjectInfo;
 PFN_clGetImageInfo clGetImageInfo;
-PFN_clGetPipeInfo clGetPipeInfo;
 PFN_clSetMemObjectDestructorCallback clSetMemObjectDestructorCallback;
-PFN_clSVMAlloc clSVMAlloc;
-PFN_clSVMFree clSVMFree;
-PFN_clCreateSamplerWithProperties clCreateSamplerWithProperties;
 PFN_clRetainSampler clRetainSampler;
 PFN_clReleaseSampler clReleaseSampler;
 PFN_clGetSamplerInfo clGetSamplerInfo;
@@ -362,8 +337,6 @@ PFN_clCreateKernelsInProgram clCreateKernelsInProgram;
 PFN_clRetainKernel clRetainKernel;
 PFN_clReleaseKernel clReleaseKernel;
 PFN_clSetKernelArg clSetKernelArg;
-PFN_clSetKernelArgSVMPointer clSetKernelArgSVMPointer;
-PFN_clSetKernelExecInfo clSetKernelExecInfo;
 PFN_clGetKernelInfo clGetKernelInfo;
 PFN_clGetKernelArgInfo clGetKernelArgInfo;
 PFN_clGetKernelWorkGroupInfo clGetKernelWorkGroupInfo;
@@ -398,11 +371,6 @@ PFN_clEnqueueNDRangeKernel clEnqueueNDRangeKernel;
 PFN_clEnqueueNativeKernel clEnqueueNativeKernel;
 PFN_clEnqueueMarkerWithWaitList clEnqueueMarkerWithWaitList;
 PFN_clEnqueueBarrierWithWaitList clEnqueueBarrierWithWaitList;
-PFN_clEnqueueSVMFree clEnqueueSVMFree;
-PFN_clEnqueueSVMMemcpy clEnqueueSVMMemcpy;
-PFN_clEnqueueSVMMemFill clEnqueueSVMMemFill;
-PFN_clEnqueueSVMMap clEnqueueSVMMap;
-PFN_clEnqueueSVMUnmap clEnqueueSVMUnmap;
 PFN_clGetExtensionFunctionAddressForPlatform
     clGetExtensionFunctionAddressForPlatform;
 PFN_clCreateImage2D clCreateImage2D;
@@ -416,20 +384,6 @@ PFN_clCreateCommandQueue clCreateCommandQueue;
 PFN_clCreateSampler clCreateSampler;
 PFN_clEnqueueTask clEnqueueTask;
 
-// OpenGL sharing
-PFN_clCreateFromGLBuffer clCreateFromGLBuffer;
-PFN_clCreateFromGLTexture clCreateFromGLTexture;
-PFN_clEnqueueAcquireGLObjects clEnqueueAcquireGLObjects;
-PFN_clEnqueueReleaseGLObjects clEnqueueReleaseGLObjects;
-
-// cl_khr_egl_event extension
-PFN_clCreateEventFromEGLSyncKHR clCreateEventFromEGLSyncKHR;
-
-// EGL sharing
-PFN_clCreateFromEGLImageKHR clCreateFromEGLImageKHR;
-PFN_clEnqueueAcquireEGLObjectsKHR clEnqueueAcquireEGLObjectsKHR;
-PFN_clEnqueueReleaseEGLObjectsKHR clEnqueueReleaseEGLObjectsKHR;
-
 // cl_khr_command_buffer extension
 PFN_clCreateCommandBufferKHR clCreateCommandBufferKHR;
 PFN_clRetainCommandBufferKHR clRetainCommandBufferKHR;
@@ -439,7 +393,7 @@ PFN_clEnqueueCommandBufferKHR clEnqueueCommandBufferKHR;
 PFN_clCommandNDRangeKernelKHR clCommandNDRangeKernelKHR;
 PFN_clGetCommandBufferInfoKHR clGetCommandBufferInfoKHR;
 
-DEFINE_QCOM_FUNCTION_PTRS
+// DEFINE_QCOM_FUNCTION_PTRS
 
 cl_mem CreateImage2DLegacy(cl_context context, cl_mem_flags flags,
                            const cl_image_format* image_format,

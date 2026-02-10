@@ -50,7 +50,9 @@ limitations under the License.
 #endif
 
 #include "tensorflow/lite/core/c/common.h"
+#if defined(__ANDROID__)
 #include "tensorflow/lite/delegates/gpu/android_hardware_buffer.h"
+#endif
 #include "tensorflow/lite/delegates/gpu/api.h"
 #include "tensorflow/lite/delegates/gpu/cl/api.h"
 #include "tensorflow/lite/delegates/gpu/cl/util.h"
@@ -716,8 +718,8 @@ class DelegateKernel {
 
   absl::Status Invoke(TfLiteContext* context) {
     if (thread_id_prepare_ != std::this_thread::get_id()) {
-      TFLITE_LOG(tflite::TFLITE_LOG_WARNING,
-                 "GpuDelegate invoke thread != prepare thread");
+      // TFLITE_LOG(tflite::TFLITE_LOG_WARNING,
+      //           "GpuDelegate invoke thread != prepare thread");
       if (core_.enforce_same_thread()) {
         return absl::FailedPreconditionError(
             "GpuDelegate must run on the same thread where it was "

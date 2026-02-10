@@ -16,6 +16,8 @@ limitations under the License.
 #ifndef TENSORFLOW_LITE_DELEGATES_GPU_CL_OPENCL_WRAPPER_H_
 #define TENSORFLOW_LITE_DELEGATES_GPU_CL_OPENCL_WRAPPER_H_
 
+#define CL_TARGET_OPENCL_VERSION 300
+#define CL_NO_EXTENSION_PROTOTYPES
 #include <CL/cl.h>
 #include <CL/cl_egl.h>
 #include <CL/cl_ext.h>
@@ -77,10 +79,6 @@ typedef cl_int(CL_API_CALL *PFN_clGetContextInfo)(
     cl_context /* context */, cl_context_info /* param_name */,
     size_t /* param_value_size */, void * /* param_value */,
     size_t * /* param_value_size_ret */) CL_API_SUFFIX__VERSION_1_0;
-typedef cl_command_queue(CL_API_CALL *PFN_clCreateCommandQueueWithProperties)(
-    cl_context /* context */, cl_device_id /* device */,
-    const cl_queue_properties * /* properties */,
-    cl_int * /* errcode_ret */) CL_API_SUFFIX__VERSION_2_0;
 typedef cl_int(CL_API_CALL *PFN_clRetainCommandQueue)(
     cl_command_queue /* command_queue */) CL_API_SUFFIX__VERSION_1_0;
 typedef cl_int(CL_API_CALL *PFN_clReleaseCommandQueue)(
@@ -104,11 +102,6 @@ typedef cl_mem(CL_API_CALL *PFN_clCreateImage)(
     const cl_image_format * /* image_format */,
     const cl_image_desc * /* image_desc */, void * /* host_ptr */,
     cl_int * /* errcode_ret */) CL_API_SUFFIX__VERSION_1_2;
-typedef cl_mem(CL_API_CALL *PFN_clCreatePipe)(
-    cl_context /* context */, cl_mem_flags /* flags */,
-    cl_uint /* pipe_packet_size */, cl_uint /* pipe_max_packets */,
-    const cl_pipe_properties * /* properties */,
-    cl_int * /* errcode_ret */) CL_API_SUFFIX__VERSION_2_0;
 typedef cl_int(CL_API_CALL *PFN_clRetainMemObject)(cl_mem /* memobj */)
     CL_API_SUFFIX__VERSION_1_0;
 typedef cl_int(CL_API_CALL *PFN_clReleaseMemObject)(cl_mem /* memobj */)
@@ -126,25 +119,11 @@ typedef cl_int(CL_API_CALL *PFN_clGetImageInfo)(
     cl_mem /* image */, cl_image_info /* param_name */,
     size_t /* param_value_size */, void * /* param_value */,
     size_t * /* param_value_size_ret */) CL_API_SUFFIX__VERSION_1_0;
-typedef cl_int(CL_API_CALL *PFN_clGetPipeInfo)(
-    cl_mem /* pipe */, cl_pipe_info /* param_name */,
-    size_t /* param_value_size */, void * /* param_value */,
-    size_t * /* param_value_size_ret */) CL_API_SUFFIX__VERSION_2_0;
 typedef cl_int(CL_API_CALL *PFN_clSetMemObjectDestructorCallback)(
     cl_mem /* memobj */,
     void(CL_CALLBACK * /*pfn_notify*/)(cl_mem /* memobj */,
                                        void * /*user_data*/),
     void * /*user_data */) CL_API_SUFFIX__VERSION_1_1;
-typedef void *(CL_API_CALL *PFN_clSVMAlloc)(
-    cl_context /* context */, cl_svm_mem_flags /* flags */, size_t /* size */,
-    cl_uint /* alignment */)CL_API_SUFFIX__VERSION_2_0;
-typedef void(CL_API_CALL *PFN_clSVMFree)(cl_context /* context */,
-                                         void * /* svm_pointer */)
-    CL_API_SUFFIX__VERSION_2_0;
-typedef cl_sampler(CL_API_CALL *PFN_clCreateSamplerWithProperties)(
-    cl_context /* context */,
-    const cl_sampler_properties * /* normalized_coords */,
-    cl_int * /* errcode_ret */) CL_API_SUFFIX__VERSION_2_0;
 typedef cl_int(CL_API_CALL *PFN_clRetainSampler)(cl_sampler /* sampler */)
     CL_API_SUFFIX__VERSION_1_0;
 typedef cl_int(CL_API_CALL *PFN_clReleaseSampler)(cl_sampler /* sampler */)
@@ -217,13 +196,6 @@ typedef cl_int(CL_API_CALL *PFN_clReleaseKernel)(cl_kernel /* kernel */)
 typedef cl_int(CL_API_CALL *PFN_clSetKernelArg)(
     cl_kernel /* kernel */, cl_uint /* arg_index */, size_t /* arg_size */,
     const void * /* arg_value */) CL_API_SUFFIX__VERSION_1_0;
-typedef cl_int(CL_API_CALL *PFN_clSetKernelArgSVMPointer)(
-    cl_kernel /* kernel */, cl_uint /* arg_index */,
-    const void * /* arg_value */) CL_API_SUFFIX__VERSION_2_0;
-typedef cl_int(CL_API_CALL *PFN_clSetKernelExecInfo)(
-    cl_kernel /* kernel */, cl_kernel_exec_info /* param_name */,
-    size_t /* param_value_size */,
-    const void * /* param_value */) CL_API_SUFFIX__VERSION_2_0;
 typedef cl_int(CL_API_CALL *PFN_clGetKernelInfo)(
     cl_kernel /* kernel */, cl_kernel_info /* param_name */,
     size_t /* param_value_size */, void * /* param_value */,
@@ -410,39 +382,6 @@ typedef cl_int(CL_API_CALL *PFN_clEnqueueBarrierWithWaitList)(
     cl_command_queue /* command_queue */, cl_uint /* num_events_in_wait_list */,
     const cl_event * /* event_wait_list */,
     cl_event * /* event */) CL_API_SUFFIX__VERSION_1_2;
-typedef cl_int(CL_API_CALL *PFN_clEnqueueSVMFree)(
-    cl_command_queue /* command_queue */, cl_uint /* num_svm_pointers */,
-    void *[] /* svm_pointers[] */,
-    void(CL_CALLBACK * /*pfn_free_func*/)(cl_command_queue /* queue */,
-                                          cl_uint /* num_svm_pointers */,
-                                          void *[] /* svm_pointers[] */,
-                                          void * /* user_data */),
-    void * /* user_data */, cl_uint /* num_events_in_wait_list */,
-    const cl_event * /* event_wait_list */,
-    cl_event * /* event */) CL_API_SUFFIX__VERSION_2_0;
-typedef cl_int(CL_API_CALL *PFN_clEnqueueSVMMemcpy)(
-    cl_command_queue /* command_queue */, cl_bool /* blocking_copy */,
-    void * /* dst_ptr */, const void * /* src_ptr */, size_t /* size */,
-    cl_uint /* num_events_in_wait_list */,
-    const cl_event * /* event_wait_list */,
-    cl_event * /* event */) CL_API_SUFFIX__VERSION_2_0;
-typedef cl_int(CL_API_CALL *PFN_clEnqueueSVMMemFill)(
-    cl_command_queue /* command_queue */, void * /* svm_ptr */,
-    const void * /* pattern */, size_t /* pattern_size */, size_t /* size */,
-    cl_uint /* num_events_in_wait_list */,
-    const cl_event * /* event_wait_list */,
-    cl_event * /* event */) CL_API_SUFFIX__VERSION_2_0;
-typedef cl_int(CL_API_CALL *PFN_clEnqueueSVMMap)(
-    cl_command_queue /* command_queue */, cl_bool /* blocking_map */,
-    cl_map_flags /* flags */, void * /* svm_ptr */, size_t /* size */,
-    cl_uint /* num_events_in_wait_list */,
-    const cl_event * /* event_wait_list */,
-    cl_event * /* event */) CL_API_SUFFIX__VERSION_2_0;
-typedef cl_int(CL_API_CALL *PFN_clEnqueueSVMUnmap)(
-    cl_command_queue /* command_queue */, void * /* svm_ptr */,
-    cl_uint /* num_events_in_wait_list */,
-    const cl_event * /* event_wait_list */,
-    cl_event * /* event */) CL_API_SUFFIX__VERSION_2_0;
 typedef void *(CL_API_CALL *PFN_clGetExtensionFunctionAddressForPlatform)(
     cl_platform_id /* platform */,
     const char * /* func_name */)CL_API_SUFFIX__VERSION_1_2;
@@ -479,50 +418,6 @@ typedef cl_int(CL_API_CALL *PFN_clEnqueueTask)(
     cl_uint /* num_events_in_wait_list */,
     const cl_event * /* event_wait_list */, cl_event * /* event */);
 
-// OpenGL sharing
-typedef cl_mem(CL_API_CALL *PFN_clCreateFromGLBuffer)(cl_context, cl_mem_flags,
-                                                      cl_GLuint, int *);
-typedef cl_mem(CL_API_CALL *PFN_clCreateFromGLTexture)(
-    cl_context /* context */, cl_mem_flags /* flags */, cl_GLenum /* target */,
-    cl_GLint /* miplevel */, cl_GLuint /* texture */,
-    cl_int * /* errcode_ret */) CL_API_SUFFIX__VERSION_1_2;
-typedef cl_int(CL_API_CALL *PFN_clEnqueueAcquireGLObjects)(
-    cl_command_queue /* command_queue */, cl_uint /* num_objects */,
-    const cl_mem * /* mem_objects */, cl_uint /* num_events_in_wait_list */,
-    const cl_event * /* event_wait_list */, cl_event * /* event */);
-typedef cl_int(CL_API_CALL *PFN_clEnqueueReleaseGLObjects)(
-    cl_command_queue /* command_queue */, cl_uint /* num_objects */,
-    const cl_mem * /* mem_objects */, cl_uint /* num_events_in_wait_list */,
-    const cl_event * /* event_wait_list */,
-    cl_event * /* event */) CL_API_SUFFIX__VERSION_1_0;
-
-// cl_khr_egl_event extension
-
-// CLeglDisplayKHR is an opaque handle to an EGLDisplay
-typedef void *CLeglDisplayKHR;
-
-// CLeglSyncKHR is an opaque handle to an EGLSync object
-typedef void *CLeglSyncKHR;
-
-typedef cl_event(CL_API_CALL *PFN_clCreateEventFromEGLSyncKHR)(
-    cl_context /* context */, CLeglSyncKHR /* sync */,
-    CLeglDisplayKHR /* display */, cl_int * /* errcode_ret */);
-
-// EGL sharing
-typedef cl_mem(CL_API_CALL *PFN_clCreateFromEGLImageKHR)(
-    cl_context /*context*/, CLeglDisplayKHR /*display*/,
-    CLeglImageKHR /*image*/, cl_mem_flags /*flags*/,
-    const cl_egl_image_properties_khr * /*properties*/,
-    cl_int * /*errcode_ret*/);
-typedef cl_int(CL_API_CALL *PFN_clEnqueueAcquireEGLObjectsKHR)(
-    cl_command_queue /*command_queue*/, cl_uint /*num_objects*/,
-    const cl_mem * /*mem_objects*/, cl_uint /*num_events_in_wait_list*/,
-    const cl_event * /*event_wait_list*/, cl_event * /*event*/);
-typedef cl_int(CL_API_CALL *PFN_clEnqueueReleaseEGLObjectsKHR)(
-    cl_command_queue /*command_queue*/, cl_uint /*num_objects*/,
-    const cl_mem * /*mem_objects*/, cl_uint /*num_events_in_wait_list*/,
-    const cl_event * /*event_wait_list*/, cl_event * /*event*/);
-
 // cl_khr_command_buffer
 typedef cl_command_buffer_khr(CL_API_CALL *PFN_clCreateCommandBufferKHR)(
     cl_uint /*num_queues*/, const cl_command_queue * /*queues*/,
@@ -547,7 +442,7 @@ typedef cl_int(CL_API_CALL *PFN_clEnqueueCommandBufferKHR)(
 typedef cl_int(CL_API_CALL *PFN_clCommandNDRangeKernelKHR)(
     cl_command_buffer_khr /*command_buffer*/,
     cl_command_queue /*command_queue*/,
-    const cl_ndrange_kernel_command_properties_khr * /*properties*/,
+    const cl_command_buffer_properties_khr * /*properties*/,
     cl_kernel /*kernel*/, cl_uint /*work_dim*/,
     const size_t * /*global_work_offset*/, const size_t * /*global_work_size*/,
     const size_t * /*local_work_size*/,
@@ -573,25 +468,18 @@ extern PFN_clCreateContextFromType clCreateContextFromType;
 extern PFN_clRetainContext clRetainContext;
 extern PFN_clReleaseContext clReleaseContext;
 extern PFN_clGetContextInfo clGetContextInfo;
-extern PFN_clCreateCommandQueueWithProperties
-    clCreateCommandQueueWithProperties;
 extern PFN_clRetainCommandQueue clRetainCommandQueue;
 extern PFN_clReleaseCommandQueue clReleaseCommandQueue;
 extern PFN_clGetCommandQueueInfo clGetCommandQueueInfo;
 extern PFN_clCreateBuffer clCreateBuffer;
 extern PFN_clCreateSubBuffer clCreateSubBuffer;
 extern PFN_clCreateImage clCreateImage;
-extern PFN_clCreatePipe clCreatePipe;
 extern PFN_clRetainMemObject clRetainMemObject;
 extern PFN_clReleaseMemObject clReleaseMemObject;
 extern PFN_clGetSupportedImageFormats clGetSupportedImageFormats;
 extern PFN_clGetMemObjectInfo clGetMemObjectInfo;
 extern PFN_clGetImageInfo clGetImageInfo;
-extern PFN_clGetPipeInfo clGetPipeInfo;
 extern PFN_clSetMemObjectDestructorCallback clSetMemObjectDestructorCallback;
-extern PFN_clSVMAlloc clSVMAlloc;
-extern PFN_clSVMFree clSVMFree;
-extern PFN_clCreateSamplerWithProperties clCreateSamplerWithProperties;
 extern PFN_clRetainSampler clRetainSampler;
 extern PFN_clReleaseSampler clReleaseSampler;
 extern PFN_clGetSamplerInfo clGetSamplerInfo;
@@ -611,8 +499,6 @@ extern PFN_clCreateKernelsInProgram clCreateKernelsInProgram;
 extern PFN_clRetainKernel clRetainKernel;
 extern PFN_clReleaseKernel clReleaseKernel;
 extern PFN_clSetKernelArg clSetKernelArg;
-extern PFN_clSetKernelArgSVMPointer clSetKernelArgSVMPointer;
-extern PFN_clSetKernelExecInfo clSetKernelExecInfo;
 extern PFN_clGetKernelInfo clGetKernelInfo;
 extern PFN_clGetKernelArgInfo clGetKernelArgInfo;
 extern PFN_clGetKernelWorkGroupInfo clGetKernelWorkGroupInfo;
@@ -647,11 +533,6 @@ extern PFN_clEnqueueNDRangeKernel clEnqueueNDRangeKernel;
 extern PFN_clEnqueueNativeKernel clEnqueueNativeKernel;
 extern PFN_clEnqueueMarkerWithWaitList clEnqueueMarkerWithWaitList;
 extern PFN_clEnqueueBarrierWithWaitList clEnqueueBarrierWithWaitList;
-extern PFN_clEnqueueSVMFree clEnqueueSVMFree;
-extern PFN_clEnqueueSVMMemcpy clEnqueueSVMMemcpy;
-extern PFN_clEnqueueSVMMemFill clEnqueueSVMMemFill;
-extern PFN_clEnqueueSVMMap clEnqueueSVMMap;
-extern PFN_clEnqueueSVMUnmap clEnqueueSVMUnmap;
 extern PFN_clGetExtensionFunctionAddressForPlatform
     clGetExtensionFunctionAddressForPlatform;
 extern PFN_clCreateImage2D clCreateImage2D;
@@ -664,20 +545,6 @@ extern PFN_clGetExtensionFunctionAddress clGetExtensionFunctionAddress;
 extern PFN_clCreateCommandQueue clCreateCommandQueue;
 extern PFN_clCreateSampler clCreateSampler;
 extern PFN_clEnqueueTask clEnqueueTask;
-
-// OpenGL sharing
-extern PFN_clCreateFromGLBuffer clCreateFromGLBuffer;
-extern PFN_clCreateFromGLTexture clCreateFromGLTexture;
-extern PFN_clEnqueueAcquireGLObjects clEnqueueAcquireGLObjects;
-extern PFN_clEnqueueReleaseGLObjects clEnqueueReleaseGLObjects;
-
-// cl_khr_egl_event extension
-extern PFN_clCreateEventFromEGLSyncKHR clCreateEventFromEGLSyncKHR;
-
-// EGL sharing
-extern PFN_clCreateFromEGLImageKHR clCreateFromEGLImageKHR;
-extern PFN_clEnqueueAcquireEGLObjectsKHR clEnqueueAcquireEGLObjectsKHR;
-extern PFN_clEnqueueReleaseEGLObjectsKHR clEnqueueReleaseEGLObjectsKHR;
 
 // cl_khr_command_buffer extension
 extern PFN_clCreateCommandBufferKHR clCreateCommandBufferKHR;
