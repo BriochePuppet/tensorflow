@@ -384,7 +384,6 @@ tflite_cc_library_with_c_headers_test(
     deps = [
         ":c_api",
         ":c_api_experimental_without_op_resolver",
-        ":c_api_opaque",
         ":c_api_types",
         ":common",
         ":operator",
@@ -405,6 +404,7 @@ tflite_cc_library_with_c_headers_test(
     name = "c_api_experimental_without_op_resolver",
     srcs = [
         "c_api_experimental.cc",
+        "c_api_opaque.cc",
     ],
     hdrs = [
         "c_api_experimental.h",
@@ -419,7 +419,6 @@ tflite_cc_library_with_c_headers_test(
     copts = tflite_copts(),
     tags = ["allow_undefined_symbols"],  # For tflite::CreateOpResolver().
     deps = [
-        ":c_api_opaque_without_op_resolver",
         ":c_api_types",
         ":c_api_without_op_resolver",
         ":common",
@@ -457,6 +456,7 @@ tflite_cc_library_with_c_headers_test(
     name = "c_api_experimental_without_op_resolver_without_alwayslink",
     srcs = [
         "c_api_experimental.cc",
+        "c_api_opaque.cc",
     ],
     hdrs = [
         "c_api_experimental.h",
@@ -473,7 +473,6 @@ tflite_cc_library_with_c_headers_test(
     copts = tflite_copts(),
     tags = ["allow_undefined_symbols"],  # For tflite::CreateOpResolver().
     deps = [
-        ":c_api_opaque_without_op_resolver_without_alwayslink",
         ":c_api_types",
         ":c_api_without_op_resolver_without_alwayslink",
         ":common",
